@@ -14,22 +14,22 @@ export class AppComponent {
   nomes5 = new Array<string>(5);
   */
 
-  listaEstado = new Array<Estado>();
-  
-  estado : Estado = new  Estado();
+  listaCategoria = new Array<Categoria>();
+
+  categoria : Categoria = new  Categoria();
 
   adicionar() : void{
-    this.listaEstado.push(this.estado);
-    this.estado = new Estado();
+    this.listaCategoria.push(this.categoria);
+    this.categoria = new Categoria();
   }
 
   excluir(i:number) : void{
-    this.listaEstado.splice(i,1)
+    this.listaCategoria.splice(i,1)
   }
 
   alterar(i: number) : void{
-    this.estado = this.listaEstado[i]
-    this.listaEstado.splice(i,1)
+    this.categoria = this.listaCategoria[i]
+    this.listaCategoria.splice(i,1)
   }
 
 }
